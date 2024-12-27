@@ -1,6 +1,6 @@
 ﻿#include "functions.h"
 
-int n = 4, o = 0, w = 0;
+int n = 4, o = 0, w = 1;
 int** G = NULL;
 
 void startDijkstra() {
@@ -62,6 +62,11 @@ void changeGen() {
             system("cls");
             printf("Введите количество вершин графа: ");
             scanf("%d", &n);
+            while (0 >= n) {
+                system("cls");
+                printf("Количество вершин должно быть > 0\nВведите количество вершин графа: ");
+                scanf("%d", &n);
+            }
             break;
         }
     }
